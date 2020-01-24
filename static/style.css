@@ -271,6 +271,9 @@ h2 {
 h2.dark_headings2 {
 	color: white;
 }
+h2#mobile {
+	padding-top: 0px;
+}
 div.bio {
 	margin: 0 auto;
 	max-width: 1200px;
@@ -361,10 +364,13 @@ textarea {
 img.landing_page_c {
 	filter: brightness(80%);
 }
-.project:hover img{
+img#dark_git {
+	margin: 10px 0px 0px 0px;
+}
+.project img{
 	filter:brightness(30%);
 }
-.project:hover :not(img):not(.hidden){
+.project :not(img):not(.hidden){
 	opacity: 1;
 }
 .nav_click {
@@ -452,6 +458,9 @@ img.banner_link {
 	pointer-events: auto;
 }
 @media only screen and (min-width: 768px) {
+	h2#mobile {
+		display: none;
+	}
 	.projects {
 		grid-template-columns: 1fr 1fr;
 		max-width: 1200px;
@@ -470,5 +479,19 @@ img.banner_link {
 	}
 	input, textarea {
 		min-width: 640px;
+	}
+}
+@media only screen and (min-width: 1024px) {
+	.project img{
+		filter:brightness(100%);
+	}
+	.project :not(img):not(.hidden){
+		opacity: 0;
+	}
+	.project:hover img{
+		filter:brightness(30%);
+	}
+	.project:hover :not(img):not(.hidden){
+		opacity: 1;
 	}
 }
