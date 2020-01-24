@@ -161,6 +161,9 @@ a.normal {
 a.normal.p_link {
 	font-size: 2rem;
 }
+a.normal.p_link.source {
+	font-size: 1.8rem;
+}
 a.normal:hover {
 	color: black;
 }
