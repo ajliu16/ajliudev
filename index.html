@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aaron's Project landing page">
+	<title>Aaron Liu - Development Landing Page</title>
+	<link rel="stylesheet" href="static/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+</head>
+<body>
+	<div class="darken_overlay" onclick="slide_in();"" id="hello"></div>
+	<nav id="dynamic_shorten" class="default">
+		<div class="nav_button" onclick="slide_in();" disabled>
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+		</div>
+		<div class="nav_bar">
+		<a class="normal title" id='title' href="ajliudev.com">Aaron Liu</a>
+			<div class="nav_links">
+				<div class="link">
+					<a class="normal dark_mode" onclick="darkmode();">dark mode </a> 
+				</div>
+				<div class="link">
+					<a class="normal about initiated" onclick="sendoff('about');">about</a>
+				</div>
+				<div class="link">
+					<a class="normal contact" onclick="sendoff('contact');">contact</a>
+				</div>
+				<a target="_blank" href="https://github.com/ajliu16"><img class="banner_link github" src="static/images/github.png" alt="Github Link"></a>
+				<a target="_blank" href="https://www.linkedin.com/in/aaron-liu-1a8ba1158/"><img class="banner_link linkedin" src="static/images/linkedin.png" alt="Linkedin Link"></a>
+			</div>
+		</div>
+		<ul class="responsive_nav">
+				<div class="close" onclick="slide_in();">
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+				</div>
+			<li>
+				<a class="nav_a dark_mode" onclick="darkmode();slide_in();">dark mode</a>
+			</li>
+			<li>
+				<a class="nav_a about initiated" onclick="sendoff('about');slide_in();">about</a>
+			</li>
+			<li>
+				<a class="nav_a contact" onclick="sendoff('contact');slide_in();">contact</a>
+			</li>
+		</ul>
+	</nav>
+	<main>
+		<h1>Thank you for visiting.</h1>
+		<h2>I'm a student who enjoys problem solving, programming, and linguistics.<br>My coding projects are below.</h2>
+		<div class="expand bio"> <div class="expand_click" id="biotitle"><span id="info" class="info" onclick="expand('bio');">More Info?</span></div> 
+			<div class="e_text">I will be completing a double degree program at Earlham College and Waseda University in Spring 2021<br>
+								My senior thesis at Earlham involves an application of deep learning for career guidance in Japan. <br>
+								I am eager to work on new projects and get more experience with software engineering.<br>
+								If you are interested in having me as an intern, feel free to contact me anytime at <a class="normal more email" href="mailto:ajliu16@earlham.edu">ajliu16@earlham.edu</a></div>
+		</div>
+		</div>
+
+		<h1 class='section_title'>Projects</h1>
+		<div class="projects">
+			<div class="project poequery" id="poequery">
+				<img class="project_images poequery_c"
+				src="static/images/poequery.png" alt="Personal Project - Poequery" onclick="fade_toggle('poequery');">
+				<div class="white white_poequery" onclick="fade_toggle('poequery');">Poequery - Web Project</div>
+				<div class="hidden hidden_poequery">
+					<div class="close banner" onclick="fade_toggle('poequery');">
+							<div class="line"></div>
+							<div class="line"></div>
+							<div class="line"></div>
+					</div>
+					<a target="_blank"href="https://www.poequery.com" class="normal p_link">Poequery.com</a>
+					<div class="p_text">PoeQuery is a website designed to search and filter in-game Unique items in the popular ARPG Path of Exile. It is written in Python, HTML, CSS, and Javascript.</div>
+					<div class="expand poe_backend"> <div class="expand_click" onclick="expand('poe_backend');"> Back End / Scripting </div> 
+							<div class="e_text">Python is used to parse through a list of item information and instantiate them as Unique objects.</div>
+							<div class="e_text">Attributes such as DPS or Armour are calculated, and the objects are appended into a list.</div>
+							<div class="e_text">Another class takes in this list, containing methods to create JSON files of each filtered catagory (i.e. Axes with the highest DPS).</div>
+							<div class="e_text">The Intersection Observer API is used to lazy load item images.</div>
+					</div>
+					<div class="expand poe_frontend"> <div class="expand_click" onclick="expand('poe_frontend');"> Front End</div>	
+						<div class="e_text">The front end is written in plain HTML, CSS, and Javascript, with the exeption of Ken Wheeler's slick slider implemented with jQuery.</div>
+						<div class="e_text">By clicking a catagory, the JSON file with the matching catagory is fetched and used to update the DOM.</div>
+						<div class="e_text">The search bar is implemented in Javascript, searching for objects with matching text. A slight delay after key inputs is added to improve search performance.</div>
+					</div>
+					<div class="expand poe_future"> <div class="expand_click" onclick="expand('poe_future');"> Implementing in Future Projects</div>
+						<div class="e_text">Web Framework - Django</div>
+						<div class="e_text">Database - PostgreSQL </div>
+					</div>
+
+				</div>
+			</div>
+			<div class="project landing_page" id="landing_page">
+				<img class="project_images landing_page_c"
+				src="static/images/fall_earlham.PNG" alt="Development Homepage" onclick="fade_toggle('landing_page');">
+				<div class="white white_landing_page" onclick="fade_toggle('landing_page');">Development Homepage</div>
+				<div class="hidden hidden_landing_page">
+					<div class="close banner" onclick="fade_toggle('landing_page');">
+							<div class="line"></div>
+							<div class="line"></div>
+							<div class="line"></div>
+					</div>
+					<a target="_blank"href="ajliudev.com" class="normal p_link">Development Homepage</a>
+					<div class="p_text">This landing page was designed to showcase projects and implement both experimental and traditional UX and UI design.</div>
+					<div class="expand landing_frontend"> <div class="expand_click" onclick="expand('landing_frontend');"> Front End</div>	
+						<div class="e_text">The front end is written in plain HTML, CSS, and Javascript.</div>
+						<div class="e_text">Dark/light mode is implemented with CSS and Javascript.</div>
+						<div class="e_text">The design is responsive and adjusts to mobile and desktop browsing.</div>
+					</div>
+					<div class="expand landing_future"> <div class="expand_click" onclick="expand('landing_future');">Future Development Plans</div>
+						<div class="e_text">Flask can be better utilized with the Fetch API to showcase more complex programming projects.</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<h1 class="contact">Contact</h1>
+		<h2>Feel free to email me at <a class="normal more email" href="mailto:ajliu16@earlham.edu">ajliu16@earlham.edu</a> or use the form below.</h2>
+		<form action="https://formspree.io/xpzpernd" method="POST">
+			<label for="name">Name: <br>
+				<input type="text" name="name"><br>
+			</label>
+			<label for="_replyto">Email: <br>
+				<input type="email" name="_replyto"><br>
+			</label>
+			<label for="message">Message: <br>
+				<textarea name="message"></textarea><br>
+			</label>
+				<button class="send_button" type="submit">Send</button>
+		</form>
+
+		<div class="footer">by aaron liu</div>
+	</main>
+	<script type="text/javascript" src= "static/script.js"></script>
+</body>
+</html>
