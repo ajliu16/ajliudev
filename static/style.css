@@ -34,8 +34,7 @@ button.darken_overlay {
 	border: 0;
 	padding: 0;
 }
-.about {
-}
+
 .nav_links {
 	display: none ;
 	margin: 0;
@@ -462,9 +461,6 @@ h2#mobile {
 	pointer-events: auto;
 }
 @media only screen and (min-width: 768px) {
-	.white {
-		opacity: 0;
-	}
 	img.landing_page_c {
 		filter: brightness(80%);
 	}
@@ -473,7 +469,7 @@ h2#mobile {
 		max-width: 1200px;
 	}
 	.projects img {
-		filter: brightness(100%);
+		filter: brightness(30%);
 		max-width: 600px;
 	}
 	.nav_button {
@@ -490,6 +486,13 @@ h2#mobile {
 	}
 }
 @media only screen and (min-width: 1024px) {
+	.white {
+		opacity: 0;
+	}
+	.projects img {
+		filter: brightness(100%);
+		max-width: 600px;
+	}
 	h2#mobile {
 		display: none;
 	}
