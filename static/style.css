@@ -222,10 +222,17 @@ div.expand, div.expand_click {
 div.expand_click {
 	padding-bottom: 5px;
 	color: #4a646c;
+	transition: color 0.6s;
 
+}
+div.expand_click:hover {
+	color: black;
 }
 div.expand_click.dark_expand_click {
 	color: rgba(187, 187, 195, 1);
+}
+div.expand_click.dark_expand_click:hover {
+	color: white;
 }
 div.expanded {
 	max-height: none;
