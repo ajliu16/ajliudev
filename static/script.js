@@ -46,7 +46,6 @@ const darkmode = () => {
     const labels = document.getElementsByTagName('label');
     const inputs = document.getElementsByTagName('input');
     const expand_click = document.getElementsByClassName('expand_click');
-    console.log(expand_click);
     document.querySelector('button').classList.toggle('dark_button');
     document.querySelector('textarea').classList.toggle('dark_textarea');
     document.querySelector('.info').classList.toggle('dark_info');
@@ -113,8 +112,7 @@ const sendoff = (sendoff_request) => {
     const investigator = document.getElementsByClassName('contact');
     const investigated = document.getElementsByClassName('about');
     if (sendoff_request == 'about') {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
+        document.getElementById("about").scrollIntoView();
         if (!investigated[0].classList.contains('initiated') || !investigated[1].classList.contains('initiated')) {
             for (i = 0; i < investigator.length; i++) {
                 investigator[i].classList.toggle('initiated');
@@ -124,8 +122,7 @@ const sendoff = (sendoff_request) => {
             };
         } 
     } else if (sendoff_request == 'contact') {
-        document.body.scrollTop = 3000;
-        document.documentElement.scrollTop = 3000;
+        document.getElementById("contact").scrollIntoView();
         if (!investigator[0].classList.contains('initiated') || !investigator[1].classList.contains('initiated')) {
             for (i = 0; i < investigated.length; i++) {
                 investigated[i].classList.toggle('initiated');
