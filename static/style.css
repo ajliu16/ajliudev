@@ -116,6 +116,9 @@ a.email.more.normal {
 	font-size: 1.5rem;
 	color: #4a646c;
 }
+a#site {
+	cursor: text;
+}
 a.initiated {
 	border-bottom: solid #4a646c 1px;
 }
@@ -218,6 +221,8 @@ div.expand, div.expand_click {
 }
 div.expand_click {
 	padding-bottom: 5px;
+	color: #4a646c;
+
 }
 div.expanded {
 	max-height: none;
@@ -246,7 +251,7 @@ main {
 }
 h1 {
 	word-wrap: break-word;
-	font-size: 2rem;
+	font-size: 2.2rem;
 	font-weight: normal;
 	max-width: 1200px;
 	text-align: left;
