@@ -224,6 +224,9 @@ div.expand_click {
 	color: #4a646c;
 
 }
+div.expand_click.dark_expand_click {
+	color: rgba(187, 187, 195, 1);
+}
 div.expanded {
 	max-height: none;
 	border-bottom: none;

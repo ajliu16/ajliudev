@@ -45,6 +45,8 @@ const darkmode = () => {
     const linkedin = document.querySelector('.linkedin');
     const labels = document.getElementsByTagName('label');
     const inputs = document.getElementsByTagName('input');
+    const expand_click = document.getElementsByClassName('expand_click');
+    console.log(expand_click);
     document.querySelector('button').classList.toggle('dark_button');
     document.querySelector('textarea').classList.toggle('dark_textarea');
     document.querySelector('.info').classList.toggle('dark_info');
@@ -92,6 +94,9 @@ const darkmode = () => {
     }
     for (let i = 0; i < inputs.length; i++) {
         inputs[i].classList.toggle('dark_inputs');
+    }
+    for (let i = 0; i < expand_click.length; i++) {
+        expand_click[i].classList.toggle('dark_expand_click');
     }
     const mode = document.getElementsByClassName("dark_mode");
     for (i = 0; i < mode.length; i++) {
